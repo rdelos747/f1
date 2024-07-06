@@ -269,6 +269,21 @@ class Program
                 deltaIcon = "";
             }
 
+            /*
+            Todo: 
+            Store the drivers time for each lap:
+            - if drivers best time, use a green "+"
+            - if fastest lap at that time, use a purple "+"
+            - if not best time, user a "-"
+            - if the time cannot be determined from the ocr, use a gray "?"
+
+            Calculate laps to overtake next driver:
+            - for each driver, compare the lap time vs the driver ahead,
+            - and calculate when they will converge.
+            - Could even then actually record if the overtake happens (eg
+            - by recording when the position changes) and see if my guess was correct
+            */
+
             Console.WriteLine($"{i + 1} {key} {deltaIcon}{delta} {data.Gap} {data.Interval}");
         }
     }
